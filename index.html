@@ -75,6 +75,99 @@
         </div>
       </section>
 
+      <!-- Modal Order -->
+      <div id="modal" class="order-modal-container">
+        <form
+          class="order-modal-form"
+          action=""
+          autocomplete="off"
+          name="order-form"
+        >
+          <!-- Form Close-X button -->
+          <div class="order-modal-close-x-coneiner">
+            <div class="order-modal-close-x-box">
+              <svg class="order-modal-close-x-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close-black"></use>
+              </svg>
+            </div>
+          </div>
+
+          <h2 class="order-modal-title">
+            Leave your contacts and we will call you back
+          </h2>
+          <!-- Form Inputs -->
+          <div class="order-modal-inputs-cont">
+            <label class="order-modal-form-label" for="name">
+              <span class="order-modal-form-label-text">Name</span>
+              <div class="order-modal-icon-box">
+                <input
+                  class="order-modal-form-input"
+                  type="text"
+                  name="name"
+                  autofocus
+                />
+                <svg class="order-modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-person-black"></use>
+                </svg>
+              </div>
+            </label>
+            <label class="order-modal-form-label" for="">
+              <span class="order-modal-form-label-text">Phone</span>
+              <div class="order-modal-icon-box">
+                <input class="order-modal-form-input" type="tel" name="order" />
+                <svg class="order-modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-phone-black"></use>
+                </svg>
+              </div>
+            </label>
+            <label class="order-modal-form-label" for="">
+              <span class="order-modal-form-label-text">Email</span>
+              <div class="order-modal-icon-box">
+                <input
+                  class="order-modal-form-input"
+                  type="email"
+                  name="order"
+                />
+                <svg class="order-modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-email-black"></use>
+                </svg>
+              </div>
+            </label>
+
+            <!-- Fotm Text Area -->
+            <label class="order-modal-form-label">
+              <span class="order-modal-form-label-text">Comment</span>
+              <textarea
+                class="order-modal-form-input-text-area"
+                name="Comment"
+                rows="8"
+                placeholder="Text input"
+              ></textarea>
+            </label>
+          </div>
+
+          <!-- Form Check-box  -->
+          <div class="order-modal-ckeck-box-cont">
+            <input
+              class="order-modal-check-box-input"
+              type="checkbox"
+              name="policy"
+            />
+            <label class="order-modal-check-box-label" for="check-b">
+              <svg class="order-modal-icon-check-svg" width="18" height="18">
+                <use href="./images/icons.svg#icon-click"></use>
+              </svg>
+              <span class="order-modal-form-label-text"
+                >I accept the terms and conditions of the
+                <a href="#" title="Privacy Policy">Privacy Policy</a>
+              </span>
+            </label>
+          </div>
+
+          <button class="order-modal-btn" type="submit">Send</button>
+        </form>
+      </div>
+
       <!-- Stratagy Item Section -->
       <section class="strategy-section section">
         <div class="container">
@@ -498,6 +591,19 @@
               </a>
             </li>
           </ul>
+        </div>
+        <!-- Subscribe -->
+        <div class="footer-subs">
+          <p class="footer-subs-text">Subscribe</p>
+          <div class="footer-subs-cont">
+            <input class="footer-subs-inp" type="text" placeholder="E-mail" />
+            <div class="footer-subs-btn-wrapper">
+              <button class="footer-subs-btn">Subscribe</button>
+              <svg class="footer-subs-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-frame"></use>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
