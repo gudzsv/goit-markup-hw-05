@@ -453,116 +453,6 @@
 
     <!-- Footer Conteiner-->
     <footer class="footer-container">
-      <!-- Modal Order -->
-      <div id="modal" class="order-modal-container is-open">
-        <div class="modal-wrapper">
-          <button class="order-modal-close-btn" type="button">
-            <svg class="order-modal-close-x-icon" width="8" height="8">
-              <use href="./images/icons.svg#icon-close-black"></use>
-            </svg>
-          </button>
-
-          <p class="order-modal-text">
-            Leave your contacts and we will call you back
-          </p>
-
-          <form
-            class="order-modal-form"
-            action="/index.html"
-            autocomplete="off"
-            name="order-form"
-          >
-            <!-- Form Inputs -->
-            <div class="order-modal-inputs-wrapper">
-              <label class="order-modal-form-label" for="user-name">
-                Name
-                <div class="order-modal-input-icon-box">
-                  <input
-                    id="user-name"
-                    class="order-modal-form-input"
-                    type="text"
-                    name="user-name"
-                    autofocus
-                  />
-                  <svg class="order-modal-icon" width="18" height="24">
-                    <use href="./images/icons.svg#icon-person-black"></use>
-                  </svg>
-                </div>
-              </label>
-            </div>
-            <div class="order-modal-inputs-wrapper">
-              <label class="order-modal-form-label" for="user-phone">
-                Phone
-                <div class="order-modal-input-icon-box">
-                  <input
-                    id="user-phone"
-                    class="order-modal-form-input"
-                    type="tel"
-                    name="user-phone"
-                  />
-                  <svg class="order-modal-icon" width="18" height="24">
-                    <use href="./images/icons.svg#icon-phone-black"></use>
-                  </svg>
-                </div>
-              </label>
-            </div>
-            <div class="order-modal-inputs-wrapper">
-              <label class="order-modal-form-label" for="user-emeil">
-                Email
-                <div class="order-modal-input-icon-box">
-                  <input
-                    id="user-emeil"
-                    class="order-modal-form-input"
-                    type="email"
-                    name="user-emeil"
-                  />
-                  <svg class="order-modal-icon" width="18" height="24">
-                    <use href="./images/icons.svg#icon-email-black"></use>
-                  </svg>
-                </div>
-              </label>
-            </div>
-            <!-- Fotm Text Area -->
-            <div class="order-modal-form-label-comment">
-              <label class="order-modal-form-label" for="user-comment">
-                Comment
-                <div class="order-modal-input-icon-box">
-                  <textarea
-                    id="user-comment"
-                    class="order-modal-form-input-text-area"
-                    name="user-comment"
-                    rows="8"
-                    placeholder="Text input"
-                  ></textarea>
-                </div>
-              </label>
-            </div>
-
-            <!-- Form Check-box  -->
-            <div class="order-modal-ckeck-box-cont">
-              <input
-                id="user-privacy"
-                class="order-modal-check-box-input visually-hidden"
-                type="checkbox"
-                value="true"
-                name="user-privacy"
-              />
-              <label class="order-modal-check-box-label" for="user-privacy"
-                >I accept the terms and conditions of the
-                <a href="#" title="Privacy Policy">Privacy Policy</a>
-                <span class="checkbox-icon-wrwpper">
-                  <svg class="order-modal-icon-check-svg" width="10" height="8">
-                    <use href="./images/icons.svg#icon-click"></use>
-                  </svg>
-                </span>
-              </label>
-            </div>
-
-            <button class="order-modal-btn" type="submit">Send</button>
-          </form>
-        </div>
-      </div>
-
       <div class="footer-logo-content-wrapper container">
         <div class="footer-logo-container">
           <a class="footer-logo-first-part" href="./index.html"
@@ -628,6 +518,116 @@
                 <use href="./images/icons.svg#icon-frame"></use>
               </svg>
             </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal Order -->
+      <div id="is-open" class="order-modal-container is-open">
+        <div class="modal-wrapper">
+          <button class="order-modal-close-btn" type="button">
+            <svg class="order-modal-close-x-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+
+          <p class="order-modal-text">
+            Leave your contacts and we will call you back
+          </p>
+
+          <form
+            class="order-modal-form"
+            action="/"
+            autocomplete="off"
+            name="order-form"
+          >
+            <!-- Form Inputs -->
+            <div class="order-modal-inputs-wrapper">
+              <label class="order-modal-form-label" for="user-name">
+                Name
+                <!-- <div class="order-modal-input-icon-box"> -->
+                <input
+                  id="user-name"
+                  class="order-modal-form-input"
+                  type="text"
+                  name="user-name"
+                  autofocus
+                />
+                <svg class="order-modal-icon" width="18" height="24">
+                  <use href="./images/icons.svg#icon-person-black"></use>
+                </svg>
+                <!-- </div> -->
+              </label>
+            </div>
+            <div class="order-modal-inputs-wrapper">
+              <label class="order-modal-form-label" for="user-phone">
+                Phone
+                <!-- <div class="order-modal-input-icon-box"> -->
+                <input
+                  id="user-phone"
+                  class="order-modal-form-input"
+                  type="tel"
+                  name="user-phone"
+                />
+                <svg class="order-modal-icon" width="18" height="24">
+                  <use href="./images/icons.svg#icon-phone-black"></use>
+                </svg>
+                <!-- </div> -->
+              </label>
+            </div>
+            <div class="order-modal-inputs-wrapper">
+              <label class="order-modal-form-label" for="user-emeil">
+                Email
+                <!-- <div class="order-modal-input-icon-box"> -->
+                <input
+                  id="user-emeil"
+                  class="order-modal-form-input"
+                  type="email"
+                  name="user-emeil"
+                />
+                <svg class="order-modal-icon" width="18" height="24">
+                  <use href="./images/icons.svg#icon-email-black"></use>
+                </svg>
+                <!-- </div> -->
+              </label>
+            </div>
+            <!-- Fotm Text Area -->
+            <div class="order-modal-form-label-comment">
+              <label class="order-modal-form-label" for="user-comment">
+                Comment
+                <!-- <div class="order-modal-input-icon-box"> -->
+                <textarea
+                  id="user-comment"
+                  class="order-modal-form-input-text-area"
+                  name="user-comment"
+                  rows="8"
+                  placeholder="Text input"
+                ></textarea>
+                <!-- </div> -->
+              </label>
+            </div>
+
+            <!-- Form Check-box  -->
+            <div class="order-modal-ckeck-box-cont">
+              <input
+                id="user-privacy"
+                class="order-modal-check-box-input visually-hidden"
+                type="checkbox"
+                value="true"
+                name="user-privacy"
+              />
+              <label class="order-modal-check-box-label" for="user-privacy"
+                >I accept the terms and conditions of the
+                <a href="#" title="Privacy Policy">Privacy Policy</a>
+                <span class="checkbox-icon-wrwpper">
+                  <svg class="order-modal-icon-check-svg" width="10" height="8">
+                    <use href="./images/icons.svg#icon-click"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+
+            <button class="order-modal-btn" type="submit">Send</button>
           </form>
         </div>
       </div>
