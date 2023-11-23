@@ -507,6 +507,7 @@ address {
 /* Class To Open Modal */
 .is-open {
   top: 0;
+  z-index: 99999;
 }
 
 .order-modal-container {
