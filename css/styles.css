@@ -4,6 +4,7 @@
   --soc-med-bg-color: #4d5ae5;
   --foo-icon-fill-color: #f4f4fd;
   --ch-b-label-color: #8e8f99;
+  --checkbix-bg-color: #404bbf;
 }
 
 ul {
@@ -720,13 +721,18 @@ address {
   height: 16px;
   width: 16px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(checkbix-bg-color);
+}
+.order-modal-check-box-input:checked + label > span {
+  border: none;
+  fill: var(foo-icon-fill-color);
 }
 
 .order-modal-check-box-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var (ch-b-label-color);
+  color: var(ch-b-label-color);
 }
 
 .order-modal-check-box-label a {
