@@ -614,6 +614,7 @@ address {
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
+  margin-bottom: 4px;
 }
 
 .order-modal-input-icon-box {
@@ -709,7 +710,12 @@ address {
   left: 24px;
 }
 
-.visually-hidden:checked + label > span > svg {
+.order-modal-check-box-input {
+  height: 16px;
+  width: 16px;
+}
+
+.order-modal-check-box-input:checked + label > span > svg {
   height: 16px;
   width: 16px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -719,7 +725,7 @@ address {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var (--ch-b-label-color);
+  color: var (ch-b-label-color);
 }
 
 .order-modal-check-box-label a {
@@ -747,7 +753,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.04em;
   height: 56px;
-  max-width: 169px;
+  min-width: 169px;
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
