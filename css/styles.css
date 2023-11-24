@@ -859,8 +859,8 @@ address {
   display: none;
 }
 
-.checkbox-icon-wrwpper {
-  display: inline-flex;
+.order-modal-checkbox-icon-wrapper {
+  /* display: inline-flex;
   float: left;
   width: 16px;
   height: 16px;
@@ -872,7 +872,21 @@ address {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  margin-right: 8px; */
+
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  float: left;
 }
 
 .order-modal-icon-check-svg {
@@ -881,14 +895,14 @@ address {
   stroke: #404bbf;
   position: absolute;
   height: 0;
-  width: 16px;
+  /* width: 16px; */
   left: 24px;
 }
 
-.order-modal-check-box-input {
+/* .order-modal-check-box-input {
   height: 16px;
   width: 16px;
-}
+} */
 
 .order-modal-check-box-input:checked + label > span {
   border: none;
