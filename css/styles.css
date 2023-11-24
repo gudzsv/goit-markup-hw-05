@@ -29,6 +29,7 @@ p {
 
 a {
   text-decoration: none;
+  outline: none;
   font-style: normal;
 }
 
@@ -58,19 +59,6 @@ img {
   height: auto;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 /* ============== Header Conteiner ============== */
 .header-root-container {
   border-bottom: 1px solid #e7e9fc;
@@ -81,6 +69,7 @@ img {
 .header-main-cont {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   column-gap: 40px;
   background-color: #fff;
 }
@@ -89,7 +78,6 @@ img {
 .header-nav-container {
   display: flex;
   align-items: center;
-  /* column-gap: 76px; */
 }
 
 /* Headerr logo design */
@@ -98,7 +86,7 @@ img {
   font-family: Raleway;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.17; /* 116.667% */
+  line-height: 1.17;
   letter-spacing: 0.54px;
   text-transform: uppercase;
   display: block;
@@ -111,7 +99,7 @@ img {
   font-family: Raleway;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.17; /* 116.667% */
+  line-height: 1.17;
   letter-spacing: 0.54px;
   text-transform: uppercase;
 }
@@ -679,15 +667,17 @@ address {
 /* ######### MODAL ######### */
 
 /* Class To Open Modal */
-.is-open {
-  top: 0;
-  z-index: 99999;
+.order-modal-container.is-open {
+  visibility: visible;
+  opacity: 1;
 }
 
 .order-modal-container {
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   left: 0;
-  /* top: 0; */
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
@@ -729,11 +719,7 @@ address {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.order-modal-close-btn:hover {
-  background-color: #404bbf;
-  border: none;
-}
-
+.order-modal-close-btn:hover,
 .order-modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
@@ -746,14 +732,11 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.order-modal-close-btn:hover .order-modal-close-x-icon {
-  fill: #ffffff;
-}
-
+.order-modal-close-btn:hover .order-modal-close-x-icon,
 .order-modal-close-btn:focus .order-modal-close-x-icon {
   fill: #ffffff;
 }
-
+/*
 .order-modal-form {
   display: flex;
   flex-direction: column;
@@ -765,7 +748,7 @@ address {
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.48px;
-}
+} */
 
 .order-modal-text {
   color: #2e2f42;
@@ -792,11 +775,11 @@ address {
 }
 
 .order-modal-input-icon-box {
-  margin-top: 4px;
   position: relative;
 }
 
 .order-modal-icon {
+  fill: var(--color-navy-blue);
   position: absolute;
   left: 16px;
   top: 50%;
@@ -827,10 +810,10 @@ address {
   fill: #4d5ae5;
 }
 
-.order-modal-form-label-comment {
+.order-modal-form-textarea-wrapper {
   margin-bottom: 16px;
 }
-
+/* Text Area */
 .order-modal-form-input-text-area {
   width: 100%;
   height: 120px;
@@ -846,34 +829,35 @@ address {
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.order-modal-form-input-text-area::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
 .order-modal-form-input-text-area:focus {
   border-color: #4d5ae5;
 }
 
-.order-modal-ckeck-box-cont {
+/* Checkbox */
+.order-modal-ckeckbox-wrapper {
   margin-bottom: 24px;
 }
 
 /* Class to hide checkbox */
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .order-modal-checkbox-icon-wrapper {
-  /* display: inline-flex;
-  float: left;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-  margin-right: 8px; */
-
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -886,35 +870,15 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  float: left;
+  /* float: left; */
 }
 
-.order-modal-icon-check-svg {
-  fill: #404bbf;
-  stroke-width: 1px;
-  stroke: #404bbf;
-  position: absolute;
-  height: 0;
-  /* width: 16px; */
-  left: 24px;
-}
-
-/* .order-modal-check-box-input {
-  height: 16px;
-  width: 16px;
-} */
-
-.order-modal-check-box-input:checked + label > span {
+.order-modal-check-box-input:checked
+  + .order-modal-check-box-label
+  .order-modal-checkbox-icon-wrapper {
   border: none;
   background-color: var(--color-medium-blue);
   fill: var(--color-cloud);
-}
-
-.order-modal-check-box-input:checked + label > span > svg {
-  height: 16px;
-  width: 16px;
-  background-color: var(--color-medium-blue);
-  border: none;
 }
 
 .order-modal-check-box-label {
@@ -925,13 +889,10 @@ address {
 }
 
 .order-modal-order-policy-link {
+  margin-left: 4px;
   color: var(--color-iris);
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0.48px;
   text-decoration-line: underline;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-modal-order-policy-link:hover,
